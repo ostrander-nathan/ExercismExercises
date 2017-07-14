@@ -1,6 +1,11 @@
 var DnaTranscriber = function() {};
 
 DnaTranscriber.prototype.toRna = function(dna) {
+    // var allowedChars = /(^[GCTAU])/;
+  // if (dna !== allowedChars) {
+  //     throw 'Invalid input'
+  // }
+
     var dnaToRna = hashTable("GCTA".split(''), "CGAU".split(''));
     return dna.split('').map(function(x) {
         return dnaToRna[x]
